@@ -4,14 +4,11 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Post */
-/* @var $authors yii\db\ActiveRecord[] */
-/* @var $tags yii\db\ActiveRecord[] */
-/* @var $category yii\db\ActiveRecord[] */
 
-$this->title = Yii::t('backend', 'Update Post:') . ' ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend', 'Posts'), 'url' => ['index']];
+$this->title = 'Update Post: ' . $model->title;
+$this->params['breadcrumbs'][] = ['label' => 'Posts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
+$this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="post-update">
 
@@ -19,9 +16,6 @@ $this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
 
     <?= $this->render('_form', [
         'model' => $model,
-        'category' => $category,
-        'tags' => $tags,
-        'authors' => $authors
     ]) ?>
 
 </div>
